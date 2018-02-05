@@ -6,7 +6,10 @@ function Mostar()
 {
 	var sabor_helado;
 		sabor_helado = prompt("cual es su sabor de helado favorito");
-	document.getElementById(sabor_helado);
+	getElementById("sabor_helado");
+
+
+
 	
 }
 
