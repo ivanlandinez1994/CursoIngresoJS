@@ -21,14 +21,12 @@ function sumar()
 
 function restar()
 {
+	/* solo en la suma se escribe parseInt dado que el simbolo + es el unico que tiene dos funciones tanto
+	para concatenar como para sumar*/
 	var n1, n2;
 	var resultado;
 		n1=document.getElementById('numeroUno').value;
-		n2=document.getElementById('numeroDos').value;
-
-		n1=parseInt(n1);
-		n2=parseInt(n2);
-		resultado=parseInt(resultado);	
+		n2=document.getElementById('numeroDos').value;	
 
 		resultado=n1-n2;
 
@@ -36,15 +34,13 @@ function restar()
 }
 
 function multiplicar()
-{ 
+{ 	
+	/* no se debe poner parseInt en la multiplicacion ni en la division dado que esto convierte el valor a numero entero
+	y si se usan numeros decimales puede que no sirva el programa.*/
 	var n1, n2;
 	var resultado;
 		n1=document.getElementById('numeroUno').value;
 		n2=document.getElementById('numeroDos').value;
-
-		n1=parseInt(n1);
-		n2=parseInt(n2);
-		resultado=parseInt(resultado);
 
 		resultado=n1*n2;
 
@@ -57,10 +53,6 @@ function dividir()
 	var resultado;
 		n1=document.getElementById('numeroUno').value;
 		n2=document.getElementById('numeroDos').value;
-
-		n1=parseInt(n1);
-		n2=parseInt(n2);
-		resultado=parseInt(resultado);
 
 		resultado=n1/n2;
 

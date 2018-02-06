@@ -8,13 +8,10 @@ function SacarResto()
         var divisor;
         var resto;
             dividendo=document.getElementById('numeroDividendo').value;
-            divisor=document.getElementById('numeroDivisor').value;
+            divisor=document.getElementById('numeroDivisor').value;        
+            //no se pone parseInt dado que no es necesario y si se pone el parseInt cambia a enter
+            //y tendremos problemas ocn los decimales.
+            resto=dividendo%divisor;
             
-            dividendo=parseInt(dividendo);
-            divisor=parseInt(divisor);
-            resto=parseInt(resto);
-            
-            resto=dividendo/divisor;
-            
-            alert("el Resto es "+resto);
+            alert("El resto es "+resto);
 }

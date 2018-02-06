@@ -12,7 +12,8 @@ function MostrarAumento()
         importe=parseInt(importe);
         importe_menos_descuento=parseInt(importe_menos_descuento);
         
-        importe_menos_descuento=importe-(importe*0.25);
+        //importe_menos_descuento=importe-(importe*0.25);
+        importe_menos_descuento=importe*0.75;	
         document.getElementById('resultado').value=importe_menos_descuento;
         
         
