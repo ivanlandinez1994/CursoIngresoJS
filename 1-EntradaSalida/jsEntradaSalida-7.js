@@ -6,22 +6,64 @@ function sumar()
 {	
 	var n1, n2;
 	var resultado;
-		n1=document.getElementById('numeroUno');
-		n2=document.getElementById('numeroDos');
+		n1=document.getElementById('numeroUno').value;
+		n2=document.getElementById('numeroDos').value;
+
+		n1=parseInt(n1);
+		n2=parseInt(n2);
+		resultado=parseInt(resultado);
+
+		resultado=n1+n2;
+
+		alert("el resultado es "+ resultado);
+
 }
 
 function restar()
 {
-	
+	var n1, n2;
+	var resultado;
+		n1=document.getElementById('numeroUno').value;
+		n2=document.getElementById('numeroDos').value;
+
+		n1=parseInt(n1);
+		n2=parseInt(n2);
+		resultado=parseInt(resultado);	
+
+		resultado=n1-n2;
+
+		alert("el resultado es "+ resultado);
 }
 
 function multiplicar()
 { 
-	
+	var n1, n2;
+	var resultado;
+		n1=document.getElementById('numeroUno').value;
+		n2=document.getElementById('numeroDos').value;
+
+		n1=parseInt(n1);
+		n2=parseInt(n2);
+		resultado=parseInt(resultado);
+
+		resultado=n1*n2;
+
+		alert("el resultado es "+ resultado);
 }
 
 function dividir()
 {
-	
+	var n1, n2;
+	var resultado;
+		n1=document.getElementById('numeroUno').value;
+		n2=document.getElementById('numeroDos').value;
+
+		n1=parseInt(n1);
+		n2=parseInt(n2);
+		resultado=parseInt(resultado);
+
+		resultado=n1/n2;
+
+		alert("el resultado es "+ resultado);
 }
 
