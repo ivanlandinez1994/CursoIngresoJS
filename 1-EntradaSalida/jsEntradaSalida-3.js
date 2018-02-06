@@ -2,9 +2,12 @@
 y luego mostrarlo por 'Alert' al presionar el botón  'MOSTRAR'*/
 function Mostar()
 {
-	var ID;
-		ID=id("ingrese");
-		alert(ID);
+	var nombre;
+	nombre= document.getElementById('elNombre').value;
+	//value es el valor del cuadro de texto
+	alert(nombre);
+
+
 }
 
 
