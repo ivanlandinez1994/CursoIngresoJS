@@ -14,8 +14,7 @@ function Sumar ()
         
         precio_p1=parseInt(precio_p1);
         precio_p2=parseInt(precio_p2);
-        precio_p3=parseInt(precio_p3);
-        resultado=parseInt(resultado);
+        precio_p3=parseInt(precio_p3);        
         
         resultado=precio_p1+precio_p2+precio_p3;
         
@@ -34,7 +33,6 @@ function Promedio ()
         precio_p1=parseInt(precio_p1);
         precio_p2=parseInt(precio_p2);
         precio_p3=parseInt(precio_p3);
-        resultado=parseInt(resultado);
         
         resultado=(precio_p1+precio_p2+precio_p3)/3;
         
@@ -53,8 +51,6 @@ function PrecioFinal ()
         precio_p1=parseInt(precio_p1);
         precio_p2=parseInt(precio_p2);
         precio_p3=parseInt(precio_p3);        
-        resultado=parseInt(resultado);
-        iva=parseInt(iva);
         
         iva=((precio_p1+precio_p2+precio_p3)*0.21);
         resultado= (precio_p1+precio_p2+precio_p3) + iva;
