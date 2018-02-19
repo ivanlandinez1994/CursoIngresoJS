@@ -1,8 +1,8 @@
 function Mostrar()
 {
     var numero=10;
-        while(numero>=1){
+        while(numero>0){            
             alert(numero);
-            numero--;
+            numero--;            
         }
 }//FIN DE LA FUNCIÓN

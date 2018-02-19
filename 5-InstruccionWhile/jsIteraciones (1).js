@@ -1,10 +1,11 @@
 function Mostrar()
 {
-    var numero=1;
+    var numero=0;
     
-        while(numero<=10){
-            alert(numero);
+        while(numero<10){
             numero++;
+            alert(numero);
+            
         }
 
 

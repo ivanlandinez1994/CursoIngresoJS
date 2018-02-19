@@ -5,9 +5,7 @@ function Mostrar()
      
         while(clave!="utn750"){
             alert("es utn750");
-            clave=prompt("ingrese la clave");
-                if(clave=="utn750"){
-                    alert("Bienvenido");
-                }
+            clave=prompt("ingrese la clave nuevamente");                
         }
+        alert("Bienvenido");
 }//FIN DE LA FUNCIÓN
