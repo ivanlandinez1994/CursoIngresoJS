@@ -20,20 +20,18 @@ function Mostrar()
             numero=parseInt(numero);
             contador++;                        
             
-            if(numero<0){               
-                sumaNegativos=parseInt(sumaNegativos);
+            if(numero<0){                               
                 sumaNegativos=sumaNegativos+numero;
                 contadorNegativos++;
             }
-            else if(numero>0){
-                sumaPositivos=parseInt(sumaPositivos);
+            else if(numero>0){                
                 sumaPositivos=sumaPositivos+numero;
                 contadorPositivos++;
             }
             else if(numero==0){
                 cantidadCeros++;
             }
-            else if(numero%2==0){
+            if(numero%2==0){
                 contadorPares++;               
                 
             }
@@ -46,11 +44,12 @@ function Mostrar()
         promedioNegativos=sumaNegativos/contadorNegativos;
         diferenciaPositivoNegativo=sumaPositivos-sumaNegativos;
         
-        document.write("La suma de los negativos es "+sumaNegativos+ "<br/> La suma de los positivos es "+sumaPositivos+
-                       "<br/> La cantidad de los positivos es "+contadorPositivos+
-                       "<br/> La cantidad de los negativos es "+contadorNegativos+"<br/> La cantidad de ceros es "+cantidadCeros+
-                       " <br/> La cantidad de numeros pares es "+contadorPares+"<br/> El promedio de los positivos es "+promedioPositivos+
-                       " <br/> El promedio de los negativos es "+promedioNegativos);
+        document.write("1) La suma de los negativos es "+sumaNegativos+ "<br>2) La suma de los positivos es "+sumaPositivos+
+                       "<br>3) La cantidad de los positivos es "+contadorPositivos+
+                       "<br>4) La cantidad de los negativos es "+contadorNegativos+"<br>5) La cantidad de ceros es "+cantidadCeros+
+                       " <br>6) La cantidad de numeros pares es "+contadorPares+"<br>7) El promedio de los positivos es "+promedioPositivos+
+                       " <br>8) El promedio de los negativos es "+promedioNegativos+
+                       "<br>9) Diferencia entre positivos y negativos, (positvos-negativos) "+diferenciaPositivoNegativo);
                // se utiliza <br/> para el salto de linea dado que es HTML.
 
 }
