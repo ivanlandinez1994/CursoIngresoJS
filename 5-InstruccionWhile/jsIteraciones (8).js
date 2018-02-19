@@ -24,6 +24,8 @@ function Mostrar()
         }
         
         parar=prompt("desea parar de ingresar numeros?, si lo desea escriba parar");
+        parar=parar.toUpperCase();
+        parar=parar.toLowerCase();
     }
     
     document.getElementById('suma').value=sumatoria;
