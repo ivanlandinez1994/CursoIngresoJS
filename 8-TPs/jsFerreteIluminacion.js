@@ -10,5 +10,63 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+	var cantidadDeLamparas;
+	var precioLamparas=35;
+	var marca;
+	var precioFinal;
+	var precioMasIngresosBrutos;
+
+		cantidadDeLamparas=document.getElementById('Cantidad').value;
+		marca=document.getElementById('Marca').value;
+		
+/*a*/	if(cantidadDeLamparas>=6){
+			precioFinal=(cantidadDeLamparas*precioLamparas)*0.50;
+			document.getElementById('precioDescuento').value=precioFinal;
+		}
+/*b*/	else if(cantidadDeLamparas==5){
+			
+			if(marca=="ArgentinaLuz"){
+				precioFinal=(cantidadDeLamparas*precioLamparas)*0.60;
+				document.getElementById('precioDescuento').value=precioFinal;
+			}
+			else{
+				precioFinal=(cantidadDeLamparas*precioLamparas)*0.70;
+				document.getElementById('precioDescuento').value=precioFinal;
+			}
+		}
+/*c*/	else if(cantidadDeLamparas==4){
+			
+			if(marca=="ArgentinaLuz"|| marca=="FelipeLamparas"){
+				precioFinal=(cantidadDeLamparas*precioLamparas)*0.75;
+				document.getElementById('precioDescuento').value=precioFinal;
+			}
+			else{
+				precioFinal=(cantidadDeLamparas*precioLamparas)*0.80;
+				document.getElementById('precioDescuento').value=precioFinal;
+			}
+		}
+/*d*/	else if(cantidadDeLamparas==3){
+			
+			if(marca=="ArgentinaLuz"){
+				precioFinal=(cantidadDeLamparas*precioLamparas)*0.85;
+				document.getElementById('precioDescuento').value=precioFinal;
+			}
+			else if(marca=="FelipeLamparas"){
+				precioFinal=(cantidadDeLamparas*precioLamparas)*0.90;
+				document.getElementById('precioDescuento').value=precioFinal;
+			}
+			else{
+				precioFinal=(cantidadDeLamparas*precioLamparas)*0.95;
+				document.getElementById('precioDescuento').value=precioFinal;
+			}
+		}
+		if(precioFinal>120){
+			var valorIngresosBrutos;
+				precioMasIngresosBrutos=precioFinal*1.10;
+				valorIngresosBrutos=precioFinal*0.1;
+				document.getElementById('precioDescuento').value=precioMasIngresosBrutos;			
+				alert("El precio de las con descuento es "+precioFinal+ 
+					" y dado que el importe es mayor a 120 se suma un impuesto del 10%"+ 
+					"\nIIBB Usted pago "+precioMasIngresosBrutos+ " siendo "+valorIngresosBrutos+ " el impuesto que pago");
+		}
 }
