@@ -1,90 +1,63 @@
 function Mostrar()
-{   
-    var notas;
-    var genero;
-    var masculino=new Array();
-    var femenino=new Array();
-    var contadorNotas=0;
-    var contadorFemenino=0;
-    var contadorMasculino=0;
-    var cantidadVaronesNotaMayora6=0;
-    
-    
-    
-    while(contadorNotas<100){
+{    
+    var letra;
+    var numero;
+    var parar;
+    var totalPositivos=0;
+    var promedioPositivos;
+    var numerosImpares=0;
+    var sumaNumerosLetraBocal=0;
+    var maximo=0;
+    var maxLetra;
+    var contador=0;
         
-        genero=prompt("ingrese el genero del estudiante "+(contadorNotas+1)+" (f) para femenino y (m) para masculino");
-        
-        if(genero=="f" || genero=="m"){
-            notas=prompt("ingrese la nota del alumno "+(contadorNotas+1));  
-            
-            if (notas>=0 && notas<=10){
-                if(genero=="f"){
-                    femenino[contadorFemenino]=notas;
-                    contadorFemenino++;
+        while(parar!="parar"){
+            contador++;
+            letra=prompt("Ingrese una letra");
+                while(!isNaN(letra)){
+                    letra=prompt("Ingrese una letra");
                 }
-                else if(genero=="m"){
-                    masculino[contadorMasculino]=notas;
-                    contadorMasculino++;
-                    if(notas>=6){
-                        cantidadVaronesNotaMayora6++;
-                    }
+            numero=prompt("ingrese un numero mayor o igual a -50 y menor o igual a 50");
+            numero=parseInt(numero);
+                while(numero< -50 || numero>50 || isNaN(numero)){
+                    numero=prompt("ingrese un numero mayor o igual a -50 y menor o igual a 50");
+                    numero=parseInt(numero);
                 }
+            if(numero>=0){
+                totalPositivos=totalPositivos+numero;
             }
-            else{
-                alert("ingrese una nota entre 0 y 10");
+            if(numero%2!=0){
+                numerosImpares++;
             }
-            contadorNotas++;
+            switch(letra){
+                case "a":
+                case "e":
+                case "i":
+                case "o":
+                case "u":
+                    sumaNumerosLetraBocal=numero+sumaNumerosLetraBocal;
+                break;
+            }
+            if(numero>maximo){
+                maximo=numero;
+                maxLetra=letra;
+
+            }
+
+            parar=prompt("si desea parar escriba parar");
         }
-        else{
-            alert("ingrese una letra correpondiente para validar el sexo");
-        }
-    }
-    var sumatoriaNotasMasculino=0;
-    var sumatoriaNotasFemenino=0;
-    var sumatoriaTotal;
-    var promedio;
-    
-    for (var i=0; i<(femenino.length); i++){
-        sumatoriaNotasFemenino=parseInt(sumatoriaNotasFemenino);
-        femenino[i]=parseInt(femenino[i]);
-        sumatoriaNotasFemenino=sumatoriaNotasFemenino+femenino[i];
-        
-    }
-    for (var i=0; i<(masculino.length); i++){
-        sumatoriaNotasMasculino=parseInt(sumatoriaNotasMasculino);
-        masculino[i]=parseInt(masculino[i]);
-        sumatoriaNotasMasculino=sumatoriaNotasMasculino+masculino[i];
-        
-    }
-    
-    sumatoriaTotal=sumatoriaNotasMasculino+sumatoriaNotasFemenino;
-    
-    promedio=sumatoriaTotal/(femenino.length+masculino.length);   
-    
-    var min1=Math.min.apply(null,femenino);        
-    var min2=Math.min.apply(null, masculino);
-    
-    
-    if(min1>min2){
-        alert("el promedio de las notas fue "+promedio+ "\nla nota mas baja fue "+min2+
-               "\nla cantidad de varones que tuvieron una nota mayor o igual a 6 fue de "+cantidadVaronesNotaMayora6+
-               "\nen total habian "+masculino.length+" varones"+"\nen total habian "+femenino.length+" mujeres");
-    }
-    else{
-        alert("el promedio de las notas fue "+promedio+ "\nla nota mas baja fue "+min1+
-                "\nla cantidad de varones que tuvieron una nota mayor o igual a 6 fue de "+cantidadVaronesNotaMayora6+
-                "\nen total habian "+femenino.length+" mujeres"+"\nen total habian "+masculino.length+" varones");
-    }
-    
-    
-    
-    
-        
-    
-    
-    
-    
-    
-    
+        promedioPositivos=totalPositivos/contador;
+        document.write("el promedio de los numeros positivos es "+promedioPositivos+
+                        "<br>La cantidad de numeros impares es "+numerosImpares+
+                        "<br>La suma de todos los numeros cuya letra haya sido una bocal es "+sumaNumerosLetraBocal+
+                        "<br>El numero maximo fue "+maximo+ " y su letra fue "+maxLetra);
+
+
+
 }
+// ingresar dos datos primero una letra luego un numero
+// los numeros van a aestar entre -50 y 50
+// informar promedio de los numeros positivos
+// cantidad numeros impares;
+// suma de todos los numeros cuya letra haya sido una bocal;
+// numero maximo y la letra con la que fue ingresado;
